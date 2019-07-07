@@ -1,6 +1,15 @@
 package dev.entite;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity(name = "Livreur")
+@Table(name = "livreur")
 public class Livreur {
+
+    @Id
     private Integer id;
     private String name;
     private String address;
@@ -10,6 +19,7 @@ public class Livreur {
     
     public Livreur(Integer ID, String name, String address, String telNumber) {
         super();
+        this.id=ID;
         this.name = name;
         this.address = address;
         this.telNumber = telNumber;

@@ -8,7 +8,7 @@ import dev.service.util.ServiceUtil;
 
 public class ListerChocolatinesOption implements OptionMenu {
 	
-	private ChocolatineService chocolatineService = ServiceUtil.chocolatineService;
+	private static ChocolatineService chocolatineService = ServiceUtil.chocolatineService;
 
 	@Override
 	public String getLibelle() {
@@ -17,13 +17,18 @@ public class ListerChocolatinesOption implements OptionMenu {
 
 	@Override
 	public void executer() {
-		System.out.println("je liste");
 		
-		List<Chocolatine> lister = chocolatineService.lister();
-		
-		lister.forEach(System.out::println);
-		
-		
+		execute();
+
+	}
+
+	public static List<Chocolatine> execute(){
+
+
+		List<Chocolatine> liste = chocolatineService.lister();
+
+		liste.forEach(System.out::println);
+		return liste;
 	}
 
 }

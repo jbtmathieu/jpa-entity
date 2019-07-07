@@ -2,8 +2,10 @@ package dev.entite;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity
+@Entity(name = "Chocolatine")
+@Table(name = "chocolatine")
 public class Chocolatine {
 
 	@Id

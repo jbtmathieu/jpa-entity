@@ -10,7 +10,7 @@ public class Sortir implements OptionMenu{
 
 	@Override
 	public void executer() {
-		System.out.println("Aurevoir");
+		System.out.println("Au revoir");
 		
 	}
 

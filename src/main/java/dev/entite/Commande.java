@@ -1,14 +1,20 @@
 package dev.entite;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+@Entity(name = "Commande")
+@Table(name = "commande")
 public class Commande {
 
+    @Id
     private Integer id;
+    @Transient
     private Chocolatine choco;
     private float prixUnitaire;
     private Integer quantite;
+    @Transient
     private Livreur livreur;
     private LocalDateTime DateHeure;
     
